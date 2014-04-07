@@ -79,10 +79,7 @@ button {
 }
 
 .loader.done {
-    z-index: 1000;
-    bottom: -20px;
-    -webkit-transition: bottom 0.2s 0.3s;
-    transition: bottom 0.2s 0.3s;
+    display: none;
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {

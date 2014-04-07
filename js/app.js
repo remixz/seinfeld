@@ -24,7 +24,7 @@ function init () {
     });
 
     // load sounds
-    var items = [];
+    var items = [ { id: 'skrill', src: 'audio/skrillfeld.mp3' } ];
     for (var i = 1; i < 15; i++) {
         items.push({ id: 'riff' + i, src: 'audio/riffs/' + i + '.mp3' });
         items.push({ id: 'laugh' + i, src: 'audio/laughs/' + i + '.mp3' });
@@ -55,6 +55,11 @@ function init () {
             createjs.Sound.play('laugh' + id, { volume: 0.5 });
         }
     });
+
+    // shake
+    window.addEventListener('shake', function () {
+        createjs.Sound.play('skrill');
+    }, false);
 }
 
 $(document).ready(init);
